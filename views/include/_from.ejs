@@ -1,0 +1,40 @@
+<!--from handling-->
+<form action="/api/quizes" method="POST" id="add_question">
+    <div class="new_question">
+        <div class="from-group">
+            <label for="questioner" class="text-light">出題者</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="questioner" value="阿彣">
+                <label for="radio-2" class="radio-label">阿彣</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="questioner" value="SC">
+                <label for="radio-3" class="radio-label">SC</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="questioner" value="Vicky">
+                <label for="radio-4" class="radio-label">Vicky</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="questioner" value="Laomao">
+                <label for="radio-4" class="radio-label">Laomao</label>
+            </div>
+            <!-- <select name="question" id="id">
+                <option name="questioner" value="laomao" >Laomao</option>
+                <option name="questioner" value="阿彣">阿彣</option>
+                <option name="questioner" value="SC">SC</option>
+            </select> -->
+        </div>
+        <div class="from-group">
+            <label for="Major" class="text-light">多數派</label>
+            <input type="text" name="major" value="" placeholder="範例：大">
+        </div>
+        <div class="from-group">
+            <label for="Minor" class="text-light">多數派</label>
+            <input type="text" name="minor" value="" placeholder="範例：小">
+        </div>
+        <div class="from-group">
+            <button type="submit" class="btn text-dark update">確認出題</button>
+        </div>
+    </div>
+</form>

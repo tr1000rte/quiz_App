@@ -1,0 +1,60 @@
+<!--include header-->
+<%-include('include/_header')%>
+<!--/include header-->
+
+<!--Main site-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/">All question<i class="fas fa-angle-double-right"></i></a>
+            </div>
+        </div>
+        <div class="from-title">
+            <h2 class="text-dark">修改題目</h2> 
+        </div>
+
+        <!-- add from -->
+        <!--from handling-->
+        <form method="POST" id="update_question">
+            <div class="new_question">
+                <div class="from-group">
+                    <label for="questioner" class="text-light">出題者</label>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-2" name="questioner" value="阿彣" <%= user.questioner=='阿彣'?'checked':''%>>
+                        <label for="radio-2" class="radio-label">阿彣</label>
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-3" name="questioner" value="SC" <%= user.questioner=='SC'?'checked':''%>>
+                        <label for="radio-3" class="radio-label">SC</label>
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-4" name="questioner" value="Vicky" <%= user.questioner=='Vicky'?'checked':''%>>
+                        <label for="radio-4" class="radio-label">Vicky</label>
+                    </div>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-5" name="questioner" value="Laomao" <%= user.questioner=='Laomao'?'checked':''%>>
+                        <label for="radio-5" class="radio-label">Laomao</label>
+                    </div>
+                </div>
+                <div class="from-group">
+                    <label for="Major" class="text-light">多數派</label>
+                    <input type="text" name="major" value="<%= user.major%>" placeholder="範例：大">
+                </div>
+                <div class="from-group">
+                    <label for="Minor" class="text-light">多數派</label>
+                    <input type="text" name="minor" value="<%= user.minor%>" placeholder="範例：小">
+                </div>
+                <div class="from-group">
+                    <button type="submit" class="btn text-dark update">確認修改</button>
+                </div>
+            </div>
+        </form>
+        
+    </div>
+</main>
+<!--/Main site-->
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--/include footer-->

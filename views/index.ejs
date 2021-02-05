@@ -1,0 +1,37 @@
+<!--include header-->
+<%-include('include/_header')%>
+<!--/include header-->
+
+<!--Main site-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add_question" class="border-shadow">
+                <span class="text-gradient"><i class="fas fa-brain"></i> 新增題目</span>
+            </a>
+        </div>
+        <!--from handling-->
+        <form action="/" method="POST">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>題號</th>
+                    <th>出題者</th>
+                    <th>多數派題目</th>
+                    <th>少數派題目</th>
+                    <th>使用</th>
+                </tr>
+            </thead>
+            <tbody>
+                <%-include('include/_show')%>
+            </tbody>
+        </table>    
+        </form>
+        <%=users%>
+    </div>
+</main>
+<!--/Main site-->
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--/include footer-->
