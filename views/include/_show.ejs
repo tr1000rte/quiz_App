@@ -6,10 +6,10 @@
     <td><%= users[i].minor %></td>
     <td><%= users[i].status %></td>
     <td>
-        <a href="/update_question?id=<%=users[i]._id%>" class="btn border-shadow update">
+        <a href="/update_question?id=<%= users[i]._id%>" class="btn border-shadow update">
             <span class="text-gradient"><i class="far fa-edit"></i></span>
         </a>
-        <a class="btn border-shadow delete" data-id=<%=users[i]._id%>>
+        <a class="btn border-shadow delete" data-id=<%= users[i]._id%> >
             <span class="text-gradient"><i class="fas fa-trash-alt"></i></span>
         </a>
     </td>

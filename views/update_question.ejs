@@ -6,7 +6,7 @@
 <main id="site-main">
     <div class="container">
         <div class="box-nav d-flex justify-between">
-            <div class="filter">
+            <div>
                 <a href="/">All question<i class="fas fa-angle-double-right"></i></a>
             </div>
         </div>
@@ -20,6 +20,7 @@
             <div class="new_question">
                 <div class="from-group">
                     <label for="questioner" class="text-light">出題者</label>
+                    <input type="hidden", name="id" value="<%= user._id%>">
                     <div class="radio inline">
                         <input type="radio" id="radio-2" name="questioner" value="阿彣" <%= user.questioner=='阿彣'?'checked':''%>>
                         <label for="radio-2" class="radio-label">阿彣</label>

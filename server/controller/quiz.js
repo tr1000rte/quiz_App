@@ -15,7 +15,7 @@ exports.createQuiz = (req, res) => {
 
     quizData.save(quizData)
     .then(() => {
-        res.redirect('add_question')
+        res.redirect('/add_question')
     })
     .catch(err => {
         res.status(500).send({
@@ -28,18 +28,18 @@ exports.createQuiz = (req, res) => {
 exports.findQuiz = (req, res) => {  
     
     if(req.query.id) {
-        const quizId = req.query.id;
+        const id = req.query.id;
 
-        quizModel.findById(quizId)
-        .then(quiz => {
+        quizModel.findById(id)
+        .then(data => {
             if(!data){
-                res.status(404).send({message: 'cannot find this data with id' + quizid })
+                res.status(404).send({message: 'cannot find this data with id' + id })
             } else {
-                res.send(quiz)
+                res.send(data)
             }
         })
         .catch(err => {
-            res.status(500).send({message: 'acammot find data by this id ' + quizid})
+            res.status(500).send({message: 'cannot find data by this id ' + id})
         })
 
     } else {
